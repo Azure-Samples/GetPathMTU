@@ -5,14 +5,14 @@
 # 
 # This function will find the optimal MTU between source and destination
 # 
-# How to use this funciton
+# How to use this function
 # This script can be used with or without flags, see examples for more clarity in usage
 # both options (using with and without flags) are mutual exclusive 
 # This function takes the following parameters
 # Destination IPv4-Address : This is mandatory parameter, we can either use the parameter
-#                            with a flat -s or without a flag
-# Initial Buffer size      : This optional parameter, the default value is 1200bytes
-# Interface Name           : This optional parameter, not using the inteface parameter
+#                            with a flag -s or without a flag
+# Initial Buffer size      : This is optional parameter, the default value is 1200bytes
+# Interface Name           : This is optional parameter, not using the inteface parameter
 #                            will use the default interface for communication
 # 
 # examples
