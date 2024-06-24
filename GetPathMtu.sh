@@ -6,27 +6,35 @@
 # This function will find the optimal MTU between source and destination
 # 
 # How to use this function
-# This script can be used with or without flags, see examples for more clarity in usage
-# both options (using with and without flags) are mutual exclusive 
-# This function takes the following parameters
-# Destination IPv4-Address : This is mandatory parameter, we can either use the parameter
-#                            with a flag -s or without a flag
-# Initial Buffer size      : This is optional parameter, the default value is 1200bytes
-# Interface Name           : This is optional parameter, not using the inteface parameter
-#                            will use the default interface for communication
+# This script can be used with and without flags, see examples for more clarity in usage
 # 
-# examples
+# This function takes the following parameters
+# Destination IPv4-Address : This is mandatory parameter, this is the first parameter without flag
+#                            check examples for more details
+# Initial Buffer size      : This is optional parameter, the default value is 1200bytes
+# Interface Name           : This is optional parameter, not using the interface parameter
+#                            will use the default interface for communication
+#
+# Syntax
+# sh GetPathMtu.sh  <destination-ip> -l <initial-packet-size> -i <interface-name>
+#
+# Examples
 # sh GetPathMtu.sh  10.1.0.4  
-# sh GetPathMtu.sh  -r 10.1.0.4 -l 2100 -i eth0
-# sh GetPathMtu.sh  -r 10.1.0.4 -l 1000
-# sh GetPathMtu.sh  -r <destination-ip> -l <initial-packet-size> -i <interface-name>
-# sh GetPathMtu.sh  -r  8.8.8.8 -l 1200 -i eth0
+# sh GetPathMtu.sh  10.1.0.4 -l 2100 -i eth0
+# sh GetPathMtu.sh  10.1.0.4 -l 1000
+# sh GetPathMtu.sh  8.8.8.8 -l 1300 -i eth0
 #################
 
-while getopts r:l:i: flag
+
+# The first parameter is accessed directly
+destinationIp="$1"
+
+# Shift past the first parameter
+shift
+
+while getopts :l:i: flag
 do
     case "${flag}" in
-        r) destinationIp=${OPTARG};;
 
 	l) startSendBufferSize=${OPTARG};;
 
