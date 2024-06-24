@@ -16,13 +16,13 @@
 #                            will use the default interface for communication
 #
 # Syntax
-# sh GetPathMtu.sh  <destination-ip> -l <initial-packet-size> -i <interface-name>
+# GetPathMtu.sh  <destination-ip> -l <initial-packet-size> -i <interface-name>
 #
 # Examples
-# sh GetPathMtu.sh  10.1.0.4  
-# sh GetPathMtu.sh  10.1.0.4 -l 2100 -i eth0
-# sh GetPathMtu.sh  10.1.0.4 -l 1000
-# sh GetPathMtu.sh  8.8.8.8 -l 1300 -i eth0
+# ./GetPathMtu.sh  10.1.0.4  
+# ./GetPathMtu.sh  10.1.0.4 -l 2100 -i eth0
+# ./GetPathMtu.sh  10.1.0.4 -l 1000
+# ./GetPathMtu.sh  8.8.8.8 -l 1300 -i eth0
 #################
 
 
