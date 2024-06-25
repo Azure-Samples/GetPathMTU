@@ -6,7 +6,6 @@ languages:
 products:
 - azure
 - azure-virtual-network
-- 
 page_type: sample
 urlFragment: GetPathMTU
 ---
