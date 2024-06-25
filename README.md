@@ -20,7 +20,7 @@ Clone the repository or download `GetPathMTU.sh` directly, then run the script.
 
 3. Run the script
 
-    `sh GetPathMTU.sh <Destination IP>`
+    `./GetPathMTU.sh <Destination IP>`
 
 ### Parameters
 
@@ -31,11 +31,11 @@ Interface Name           : This optional parameter, not using the inteface param
 #### Examples
 
 ```bash
-sh GetPathMtu.sh  10.1.0.4  
-sh GetPathMtu.sh  -r 10.1.0.4 -l 2100 -i eth0
-sh GetPathMtu.sh  -r 10.1.0.4 -l 1000
-sh GetPathMtu.sh  -r <destination-ip> -l <initial-packet-size> -i <interface-name>
-sh GetPathMtu.sh  -r  10.1.0.4 -l 1200 -i eth0
+./GetPathMtu.sh  10.1.0.4  
+./GetPathMtu.sh  -r 10.1.0.4 -l 2100 -i eth0
+./GetPathMtu.sh  -r 10.1.0.4 -l 1000
+./GetPathMtu.sh  -r <destination-ip> -l <initial-packet-size> -i <interface-name>
+./GetPathMtu.sh  -r  10.1.0.4 -l 1200 -i eth0
 ```
 
 ## Demo
@@ -43,7 +43,7 @@ sh GetPathMtu.sh  -r  10.1.0.4 -l 1200 -i eth0
 Sample results:
 
 ```bash
-$ sh GetPathMtu.sh 10.1.0.4
+$ ./GetPathMtu.sh 10.1.0.4
 destination: 10.1.0.4
 startSendBufferSize: 1200
 interfaceName: Default interface
