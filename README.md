@@ -1,3 +1,21 @@
+---
+name: GetPathMTU - Path MTU Discovery Sample Script
+description: Sample script to test maximum MTU between source and destination. 
+languages:
+- bash
+products:
+- azure
+- azure-virtual-network
+- 
+page_type: sample
+urlFragment: GetPathMTU
+---
+<!-- YAML front-matter schema: https://review.learn.microsoft.com/en-us/help/contribute/samples/process/onboarding?branch=main#supported-metadata-fields-for-readmemd -->
+
+
+
+
+
 # Project Name
 
 GetPathMTU is a bash script that provides the user a way to test the maximum supported MTU between the source where code is executed and the destination provided.
